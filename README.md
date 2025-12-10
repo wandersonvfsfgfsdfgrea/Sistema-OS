@@ -197,3 +197,9 @@ X-System v1.0 – Finalizada com documentação e testes
 
 ### 📄 Relatório em PDF
 ![Relatório PDF](screenshots/relatorio-pdf.png)
+
+## 🧪 Testes com JUnit
+
+### ✅ Execução dos Testes
+![Testes JUnit](screenshots/Teste_JUnit.png)
+
