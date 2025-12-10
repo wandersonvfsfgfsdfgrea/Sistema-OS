@@ -181,16 +181,19 @@ X-System v1.0 – Finalizada com documentação e testes
 ## 🖼️ Screenshots do Sistema
 
 ### 🔐 Tela de Login
-![Tela de Login](screenshots/Tela de Login.png)
+![Tela de Login](screenshots/tela-login.png)
 
 ### 🏠 Tela Principal
-![Tela Principal](screenshots/Tela Principal.png)
+![Tela Principal](screenshots/tela-principal.png)
 
 ### 👥 Cadastro de Clientes
-![Cadastro de Clientes](screenshots/Tela de Cadastro De Clientes.png)
+![Cadastro de Clientes](screenshots/cadastro-clientes.png)
+
+### 👤 Cadastro de Usuários
+![Cadastro de Usuários](screenshots/cadastro-usuarios.png)
 
 ### 🧾 Ordem de Serviço
-![Ordem de Serviço](screenshots/Tela De OS.png)
+![Ordem de Serviço](screenshots/tela-os.png)
 
 ### 📄 Relatório em PDF
-![Relatório PDF](screenshots/Impressão PDF.png)
+![Relatório PDF](screenshots/relatorio-pdf.png)
