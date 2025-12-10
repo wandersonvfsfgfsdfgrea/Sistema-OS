@@ -177,3 +177,20 @@ Sistema desenvolvido para estudo, portfólio e uso real em pequenas empresas.
 🏷️ Versão
 
 X-System v1.0 – Finalizada com documentação e testes
+-------------------------------------------------------------------------------------------------------------------------------------
+## 🖼️ Screenshots do Sistema
+
+### 🔐 Tela de Login
+![Tela de Login](screenshots/Tela de Login.png)
+
+### 🏠 Tela Principal
+![Tela Principal](screenshots/Tela Principal.png)
+
+### 👥 Cadastro de Clientes
+![Cadastro de Clientes](screenshots/Tela de Cadastro De Clientes.png)
+
+### 🧾 Ordem de Serviço
+![Ordem de Serviço](screenshots/Tela De OS.png)
+
+### 📄 Relatório em PDF
+![Relatório PDF](screenshots/Impressão PDF.png)
