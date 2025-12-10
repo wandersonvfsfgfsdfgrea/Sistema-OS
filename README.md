@@ -1,148 +1,179 @@
-💻 Sistema de Ordem de Serviço (InfoX)
+📘 Sistema de Ordem de Serviço (X-System)
 
-Aplicação completa para gestão de Ordens de Serviço, desenvolvida em Java (Swing) com banco de dados MySQL.
-O sistema permite cadastrar clientes, usuários, criar ordens de serviço, atualizar, excluir e gerar relatórios em PDF usando JasperReports.
+Sistema desktop desenvolvido em Java, utilizando POO, DAO, MySQL, JDBC, Swing, JUnit e JasperReports.
+Criado com foco em aprendizado, organização profissional e boas práticas de desenvolvimento.
+----------------------------------------------------------------------------------------------------------------------------------------------
+🚀 Descrição Geral
 
-🚀 Tecnologias Utilizadas
+O X-System é um sistema de controle de Ordem de Serviço (OS) voltado para pequenas empresas, assistências técnicas e prestadores de serviços.
+Ele permite:
 
-☕ Java SE
+Gestão de clientes
 
-🖼 Java Swing (Interface gráfica)
+Emissão, consulta, atualização e remoção de OS
 
-🗄 MySQL
+Relatórios profissionais em PDF (JasperReports)
 
-🔌 JDBC
+Controle de usuários com níveis de acesso
 
-📄 JasperReports (.jasper)
+Tela de login com validação de credenciais
 
-🧪 JUnit (testes unitários)
+Interface desktop completa construída com Java Swing
 
-🧰 NetBeans IDE
+O projeto segue uma arquitetura organizada com camadas Model, DAO e Telas, além de testes unitários aplicados com JUnit.
+--------------------------------------------------------------------------------------------------------------------------------------------
+🛠️ Tecnologias Utilizadas
 
-🖼 Ícones em PNG para a interface
+Java 8+
 
-📌 Funcionalidades Principais
-👤 Módulo de Clientes
+Banco de Dados MySQL
+
+JDBC (Driver do MySQL)
+
+NetBeans (GUI Builder)
+
+Java Swing
+
+POO (Herança, Polimorfismo, Encapsulamento, Abstração)
+
+DAO – Data Access Object
+
+JUnit 4 – Testes de Unidade
+
+JasperReports – Relatórios .jasper
+
+DbUtils – Conversão rápida de ResultSet em TableModel
+-------------------------------------------------------------------------------------------------------------------------------------------
+📂 Estrutura do Projeto
+src/
+ └── br/com/infox/
+      ├── dao/        # Conexão e classes DAO (ClienteDAO, UsuarioDAO, OrdemServicoDAO)
+      ├── model/      # Classes de modelo (Cliente, Usuario, Pessoa, OrdemServico)
+      ├── telas/      # Telas Swing (Login, Principal, Clientes, OS, Usuários)
+      └── testes/     # Testes JUnit
+-------------------------------------------------------------------------------------------------------------------------------------------
+📌 Principais Funcionalidades
+👥 Clientes
 
 Cadastrar clientes
 
 Pesquisar por nome
 
-Editar informações
+Alterar dados
 
-Excluir registros
+Remover clientes
 
-Listagem dinâmica na tabela
+Preencher tabela dinâmica com DbUtils
+--------------------------------------------------------------------------------------------------------------------------------------------
+🧾 Ordem de Serviço (OS)
 
-👨‍🔧 Módulo de Usuários
+Definir tipo (📄 Orçamento ou 🔧 Ordem de Serviço)
 
-Cadastro de usuários com permissão
+Emitir OS
 
-Login e autenticação
+Consultar OS pelo número
 
-Perfis: admin e user
+Alterar OS
 
-CRUD completo
+Excluir OS
 
-🛠 Ordem de Serviço
+Imprimir OS em PDF
 
-Emissão de OS
+Buscar cliente vinculado
+--------------------------------------------------------------------------------------------------------------------------------------------
+👤 Usuários
 
-Tipo: Orçamento ou OS
+Cadastro de usuários
 
-Situações (na bancada, aprovado, reprovado, aguardando peças etc.)
+Consulta por ID
 
-Associação com cliente
+Edição e remoção
 
-Edição, remoção e busca por número da OS
+Níveis de acesso: admin e user
+--------------------------------------------------------------------------------------------------------------------------------------------
+🔐 Tela de Login
 
-🧾 Relatórios
+Validação de login e senha
+
+Carregamento da permissão (admin libera menus extras)
+
+Indicador visual de conexão com o banco (dbok / dberro)
+--------------------------------------------------------------------------------------------------------------------------------------------
+📄 Relatórios (JasperReports)
 
 Relatório de clientes
 
 Relatório de serviços
 
-Impressão de OS individual
+Relatório individual da OS
 
-Geração via JasperReports
+Modelos em:
+/reports/os.jasper
+/reports/clientes.jasper
+/reports/servicos.jasper
+--------------------------------------------------------------------------------------------------------------------------------------------
+🧪 Testes com JUnit
 
-🗂 Estrutura do Projeto
-src/
- ├── br.com.infox.dao/
- │     ├── ClienteDAO.java
- │     ├── UsuarioDAO.java
- │     ├── OrdemServicoDAO.java
- │     └── ModuloConexao.java
- ├── br.com.infox.model/
- │     ├── Pessoa.java
- │     ├── Cliente.java
- │     ├── Usuario.java
- │     └── OrdemServico.java
- ├── br.com.infox.telas/
- │     ├── TelaPrincipal.java
- │     ├── TelaLogin.java
- │     ├── TelaCliente.java
- │     ├── TelaUsuario.java
- │     ├── TelaOs.java
- │     └── TelaSobre.java
- └── br.com.infox.testes/
-       ├── ClienteDAOTest.java
-       ├── UsuarioDAOTest.java
-       └── ModuloConexaoTest.java
+O projeto inclui testes unitários, como:
 
-💾 Banco de Dados
+ClienteDAOTest → insere cliente, verifica no banco e remove
 
-O sistema utiliza MySQL.
-Tabelas:
+Testes básicos de conexão (ModuloConexaoTest)
 
-tbclientes
+Testes de persistência e consistência de dados
+---------------------------------------------------------------------------------------------------------------------------------------------
+🏗️ Requisitos Para Rodar
+✔️ 1. Banco de Dados
 
-tbusuarios
+Criar o banco no MySQL:
 
-tbos (ordens de serviço)
-
-A conexão é feita pelo arquivo:
-
-ModuloConexao.java
-
-🧪 Testes Unitários (JUnit)
-
-O projeto inclui testes automáticos:
-
-Teste de conexão com o banco
-
-Teste de inserção de cliente
-
-Teste dos DAOs principais
-
-🖨 Impressão de Relatórios
-
-Os relatórios ficam em:
-
-/reports/*.jasper
+CREATE DATABASE dbinfox;
+USE dbinfox;
 
 
-E são gerados com:
+Criar as tabelas: (Clientes, Usuários, OS – se quiser eu gero aqui também)
 
-JasperPrint print = JasperFillManager.fillReport("caminho.jasper", parametros, conexao);
-JasperViewer.viewReport(print, false);
+✔️ 2. Configurar o arquivo ModuloConexao
 
-▶️ Execução do Projeto
+Ajustar usuário
 
-Faça o clone:
+Ajustar senha
 
-git clone https://github.com/SEU-USUARIO/NOME-DO-REPO.git
+Ajustar porta se necessário
+
+✔️ 3. Driver MySQL Connector
+
+Adicionar no projeto:
+
+mysql-connector-j-8.x.x.jar
+
+✔️ 4. Libs obrigatórias
+
+rs2xml.jar
+
+JasperReports libs
+
+JUnit 4
+-------------------------------------------------------------------------------------------------------------------------------------
+▶️ Como Executar
+
+Abrir no NetBeans
+
+Verificar o arquivo ModuloConexao
+
+Rodar a classe TelaLogin.java
+
+Logar com usuário cadastrado
+
+Usar o sistema normalmente
 
 
-Importe no NetBeans
+-------------------------------------------------------------------------------------------------------------------------------------
+👨‍💻 Autor
 
-Configure o banco MySQL
+Wanderson Santos
+Sistema desenvolvido para estudo, portfólio e uso real em pequenas empresas.
 
-Atualize o caminho dos relatórios
+🏷️ Versão
 
-Execute a classe TelaLogin
-
-👨‍💻 Desenvolvedor
-
-Wanderson Santos Lemos
-Sistema desenvolvido para fins de estudo e prática de Java + MySQL.
+X-System v1.0 – Finalizada com documentação e testes
