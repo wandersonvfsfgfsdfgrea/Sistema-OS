@@ -203,3 +203,13 @@ X-System v1.0 – Finalizada com documentação e testes
 ### ✅ Execução dos Testes
 ![Testes JUnit](screenshots/Teste_JUnit.png)
 
+------------------------------------------------------------------------------------------------------------------------------------------
+
+## ▶️ Demonstração em Vídeo
+
+Apresentação completa do sistema em funcionamento, mostrando as principais telas, fluxos e recursos implementados.
+
+🔗 Assista no YouTube:  
+[https://www.youtube.com/watch?v=SEU_ID_DO_VIDEO](https://www.youtube.com/watch?v=BdMX8V1hV1s)
+
+
